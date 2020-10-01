@@ -14,7 +14,7 @@ if __name__ == "__main__":
         name = 'soter-trivy',
         setup_requires = ['setuptools_scm'],
         use_scm_version = True,
-        description = 'HTTP API over Trivy CLI.',
+        description = 'Soter scanner implementation for Trivy.',
         long_description = README,
         classifiers = [
             "Programming Language :: Python",
@@ -29,5 +29,6 @@ if __name__ == "__main__":
         install_requires = [
             'quart',
             'jsonrpc-asyncio-server',
+            'soter-scanner-model',
         ],
     )
