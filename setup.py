@@ -31,4 +31,14 @@ if __name__ == "__main__":
             'jsonrpc-asyncio-server',
             'soter-scanner-model',
         ],
+        entry_points = {
+            'console_scripts': [
+                # Script to check if the database has ever been installed
+                'trivy-db-exists = soter.trivy.db:exists',
+                # Script to allow a one-off update of the Trivy vulnerability database
+                'trivy-db-update = soter.trivy.db:update',
+                # Script to allow periodic updates of the Trivy vulnerability database
+                'trivy-db-periodic-update = soter.trivy.db:periodic_update',
+            ],
+        }
     )
